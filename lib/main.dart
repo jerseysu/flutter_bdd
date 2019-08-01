@@ -2,12 +2,24 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Flutter Tutorial',
-    home: TutorialHome(),
+    title: 'Flutter Gherkin Demo',
+    home: MyHomePage(),
   ));
 }
 
-class TutorialHome extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _value = 0;
+  void valueUp() {
+    setState(() {
+      _value++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // Scaffold is a layout for the major Material Components.
@@ -33,26 +45,37 @@ class TutorialHome extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children:[
             Text('Hello, Jersey!', 
-                style: TextStyle(
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w800,
+                fontFamily: 'Roboto',
+                letterSpacing: 0.5,
+                fontSize: 30,
+              ),
+              key: Key('textField')),
+            Text('$_value', 
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w100,
+                fontFamily: 'Roboto',
+                fontSize: 30,
+              ),
+              key: Key('textFieldNum')),
+            FloatingActionButton(
+              tooltip: 'Add', // used by assistive technologies
+              child: Icon(Icons.add_circle, key: Key('addIcon')),
+              onPressed: valueUp,
+            ),
+            RaisedButton(
+              child: Text('Open Second Tab', 
+              style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w800,
                   fontFamily: 'Roboto',
                   letterSpacing: 0.5,
-                  fontSize: 30,
-                ),
-              key: Key('textField')),
-            FloatingActionButton(
-              tooltip: 'Add', // used by assistive technologies
-              child: Icon(Icons.add, key: Key('addIcon')),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),
-                );
-              }
-            ),
-            RaisedButton(
-              child: Text('Open Second Tab', key: Key('openBtn')),
+                  fontSize: 15,
+              ),
+              key: Key('openBtn')),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -79,9 +102,18 @@ class SecondRoute extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('Go back!', key: Key('goBackBtn')),
+          child: Text('Go back!', 
+          style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w800,
+                  fontFamily: 'Roboto',
+                  letterSpacing: 0.5,
+                  fontSize: 15,
+          ),
+          key: Key('goBackBtn')),
         ),
       ),
     );
   }
 }
+
