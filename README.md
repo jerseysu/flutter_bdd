@@ -8,6 +8,8 @@ The sample project is based on following instruction:
 
 - flutter_gherkin  sample: [Flutter-Ghkerin Lib](https://github.com/jonsamwell/flutter_gherkin)
 
+![](flutter_bdd_demo_iOS.gif)
+
 ## Requirements
 
 - Flutter v1.7.8+hotfix.4
@@ -24,9 +26,9 @@ dependencies:
     flutter_gherkin: ^1.0.0
 ```
 
-Install dependencies:
+Adding a package dependency to an app:
 ```
-# Installation Pub
+# Install
 $ flutter pub get
 ```
 
