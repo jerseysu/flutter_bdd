@@ -3,9 +3,8 @@ import 'package:flutter_gherkin/flutter_gherkin.dart';
 import 'package:gherkin/gherkin.dart';
 import 'package:glob/glob.dart';
 import 'hooks/hook_example.dart';
-// import 'steps/colour_parameter.dart';
 import 'steps/then_steps.dart';
-// import 'steps/tap_button_n_times_step.dart';
+import 'steps/when_steps.dart';
 
 Future<void> main() {
   final config = FlutterTestConfiguration()
@@ -18,7 +17,7 @@ Future<void> main() {
     ..hooks = [
       HookExample()
     ] // you can include "AttachScreenhotOnFailedStepHook()" to take a screenshot of each step failure and attach it to the world object
-    ..stepDefinitions = [ExpectElementToHaveValue()]
+    ..stepDefinitions = [ExpectElementToHaveValue(),TapButtonNTimesStep()]
     // ..customStepParameterDefinitions = [ColourParameter()]
     ..restartAppBetweenScenarios = true
     ..targetAppPath = "test/app.dart"
