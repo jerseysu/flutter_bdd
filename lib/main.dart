@@ -60,10 +60,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontFamily: 'Roboto',
                 fontSize: 30,
               ),
-              key: Key('textFieldNum')),
+              key: Key('counterTextField')),
             FloatingActionButton(
               tooltip: 'Add', // used by assistive technologies
-              child: Icon(Icons.add_circle, key: Key('addIcon')),
+              child: Icon(Icons.add_circle, key: Key('addBtn')),
               onPressed: valueUp,
             ),
             RaisedButton(
