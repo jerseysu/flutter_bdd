@@ -1,4 +1,3 @@
-import 'package:flutter_driver/flutter_driver.dart';
 import 'package:flutter_gherkin/flutter_gherkin.dart';
 import 'package:gherkin/gherkin.dart';
 import '../pages/landing_page.dart';
@@ -9,8 +8,7 @@ class TapButtonNTimesStep extends When2WithWorld<String, int, FlutterWorld> {
 
   @override
   Future<void> executeStep(String key, int times) async {
-    final locator = find.byValueKey(key);
-    var landingPage = new LandingPage(world.driver, locator, world);
+    var landingPage = new LandingPage(world.driver, key);
     await landingPage.tapPlusOneBtnForNTimes(key, times, world);
   }
 

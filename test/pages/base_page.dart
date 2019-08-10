@@ -4,8 +4,8 @@ import 'package:flutter_gherkin/flutter_gherkin.dart';
 
 class BasePage extends FlutterWorld {
   
-  BasePage(FlutterDriver driver, SerializableFinder finder, FlutterWorld world) {
-    waitFor(driver, finder);
+  BasePage(FlutterDriver driver) {
+    print (driver);
   }
 
   static Future<void> tap(FlutterDriver driver, SerializableFinder locator, FlutterWorld world) async {

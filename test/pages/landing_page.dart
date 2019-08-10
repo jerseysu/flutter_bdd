@@ -5,8 +5,9 @@ import 'package:flutter_gherkin/flutter_gherkin.dart';
 import 'package:test/test.dart';
 
 class LandingPage extends BasePage {
-  LandingPage(FlutterDriver driver, SerializableFinder finder, FlutterWorld world) : super(driver, finder, world) {
-    BasePage.waitFor(driver, finder);
+  LandingPage(FlutterDriver driver, String key) : super(driver) {
+    final locator = find.byValueKey(key);
+    BasePage.waitFor(driver, locator);
   }
 
   Future<void> tapPlusOneBtnForNTimes(String key, int times, FlutterWorld world) async {
