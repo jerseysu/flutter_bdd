@@ -25,8 +25,6 @@ class ExpectElementToHaveValue
           world.driver, find.byValueKey(key),
           timeout: timeout * .9);
       expect(text, value);
-      // expect(find.text('Hello, world!'), findsOneWidget);
-      print('movieTitle: $key');
     } catch (e) {
       await reporter.message(
           "Step error '${pattern.pattern}': $e", MessageLevel.error);
