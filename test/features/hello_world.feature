@@ -6,7 +6,7 @@ Feature: Hello World
     Then I expect the "textField" to be "Hello, Jersey!"
 
   Scenario: Check App Title When Switch Page
-    When I tap the "openBtn" button
+    Given I go to second page
     Then I expect the "secendTabTitle" to be "Jersey Second Tab"
-    And I tap the "goBackBtn" button
+    When I go to landing page
     Then I expect the "firstTabTitle" to be "Jeresy Cool!"
