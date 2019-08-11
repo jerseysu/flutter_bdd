@@ -34,18 +34,70 @@ $ flutter pub get
 
 ## Execution Test:
 
-Execute by the command line:
-
-```sh
-dart test/app_test.dart
+### Execute target to iOS / Android:
+- Use flutter devices to get target device id
 ```
+# run flutter devices
+$ flutter devices
+```
+
+- Config targetDeviceId in [app_test.dart](test/app_test.dart#L24)
+```
+Ex: (Android), default empty string
+..targetDeviceId = "emulator-5554"
+```
+
+- Execute command line with target devices
+```
+# execute command line
+$ dart test/app_test.dart
+```
+
+![](flutter_bdd_demo_Andriod.gif)
 
 ## Useful Sample:
 
-> WIP~
+- Page Object Patterns
+```
+class LandingPage extends BasePage {
+
+  final landingPageTitle = 'firstTabTitle';
+
+  LandingPage(FlutterDriver driver) : super(driver) {
+    final locator = super.finElementByKey(landingPageTitle);
+    BasePage.waitFor(driver, locator);
+  }
+
+  Future<void> doSomething(FlutterWorld world) async {
+    // doSomehting
+
+  }
+}
+```
+
+- Step Definition
+```
+import '../pages/landing_page.dart';
+
+class TapButtonNTimesStep extends When2WithWorld<String, int, FlutterWorld> {
+  TapButtonNTimesStep()
+      : super(StepDefinitionConfiguration()..timeout = Duration(seconds: 30));
+
+  @override
+  Future<void> executeStep(String key, int times) async {
+    final landingPage = new LandingPage(world.driver);
+    await landingPage.tapPlusOneBtnForNTimes(key, times, world);
+  }
+
+  @override
+  RegExp get pattern => RegExp(r"I tap the {string} button {int} times");
+}
+
+```
 
 ## Documentation:
 > WIP~
+
 
 
 ## Author
