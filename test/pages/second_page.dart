@@ -7,7 +7,7 @@ import 'package:flutter_gherkin/flutter_gherkin.dart';
 
 class SecondPage extends BasePage {
 
-  final secondPageTitle = 'firstTabTitle';
+  final secondPageTitle = 'secondTabTitle';
   final goBackBtn = 'goBackBtn';
 
   SecondPage(FlutterDriver driver) : super(driver) {
@@ -15,13 +15,13 @@ class SecondPage extends BasePage {
     BasePage.waitFor(driver, locator);
   }
 
-  // Future _init(FlutterDriver driver) async {
-  //   final locator = super.finElementByKey(secondPageTitle);
-  //   await BasePage.waitFor(driver, locator);
-  // }
-
   Future<void> goToLandingPage(FlutterWorld world) async {
     final locator = super.finElementByKey(goBackBtn);
     await BasePage.tap(world.driver, locator, world);
+  }
+
+  Future<void> compSecondPageTitleValue(String value, FlutterWorld world) async {
+    final text = await BasePage.getText(world.driver, find.byValueKey(secondPageTitle));
+    await BasePage.compareText(text, value);
   }
 }

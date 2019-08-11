@@ -7,6 +7,6 @@ Feature: Hello World
 
   Scenario: Check App Title When Switch Page
     Given I go to second page
-    Then I expect the "secendTabTitle" to be "Jersey Second Tab"
+    Then I expect second page title to be "Jersey Second Tab"
     When I go to landing page
-    Then I expect the "firstTabTitle" to be "Jeresy Cool!"
+    Then I expect landing page title to be "Jeresy Cool!"

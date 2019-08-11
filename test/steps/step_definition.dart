@@ -39,3 +39,24 @@ class GoToPage extends Given1WithWorld<String, FlutterWorld> {
   @override
   RegExp get pattern => RegExp(r"I go to (landing|second) page");
 }
+
+class ExpectElementToHaveValue
+    extends Then2WithWorld<String, String, FlutterWorld> {
+
+  @override
+    RegExp get pattern => RegExp(r"I expect (landing|second) page title to be {string}");
+
+  @override
+  Future<void> executeStep(String page, String value) async {
+      switch (page) {
+      case "second":
+        final secondPage = new SecondPage(world.driver);
+        await secondPage.compSecondPageTitleValue(value, world);
+        break;
+      case "landing":
+        final landingPage = new LandingPage(world.driver);
+        await landingPage.compLandingPageTitleValue(value, world);
+        break;
+    }
+  }
+}

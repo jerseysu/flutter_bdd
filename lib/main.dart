@@ -95,7 +95,7 @@ class SecondRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Jersey Second Tab", key: Key('secendTabTitle')),
+        title: Text("Jersey Second Tab", key: Key('secondTabTitle')),
       ),
       body: Center(
         child: RaisedButton(

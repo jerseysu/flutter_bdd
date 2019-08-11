@@ -4,7 +4,6 @@ import 'base_page.dart';
 import 'package:flutter_gherkin/src/flutter/flutter_world.dart';
 import 'package:flutter_driver/flutter_driver.dart';
 import 'package:flutter_gherkin/flutter_gherkin.dart';
-import 'package:test/test.dart';
 
 class LandingPage extends BasePage {
 
@@ -15,11 +14,6 @@ class LandingPage extends BasePage {
     final locator = super.finElementByKey(landingPageTitle);
     BasePage.waitFor(driver, locator);
   }
-
-  // Future _init(FlutterDriver driver) async {
-  //   final locator = super.finElementByKey(landingPageTitle);
-  //   await BasePage.waitFor(driver, locator);
-  // }
 
   Future<void> goToSecondPage(FlutterWorld world) async {
     final locator = super.finElementByKey(scecondTabBtn);
@@ -33,8 +27,8 @@ class LandingPage extends BasePage {
     }
   }
 
-  Future<void> compElementValue(String key, String value, FlutterWorld world) async {
-    final text = await BasePage.getText(world.driver, find.byValueKey(key));
-    expect(text, value);
+  Future<void> compLandingPageTitleValue(String value, FlutterWorld world) async {
+    final text = await BasePage.getText(world.driver, find.byValueKey(landingPageTitle));
+    await BasePage.compareText(text, value);
   }
 }

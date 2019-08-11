@@ -25,8 +25,8 @@ class BasePage extends FlutterWorld {
   static Future<void> waitFor(FlutterDriver driver, SerializableFinder finder,
       {Duration timeout = const Duration(seconds: 30)}) async {
     try {
-      await FlutterDriverUtils.waitForFlutter(driver, timeout: timeout);
       await driver.waitFor(finder, timeout: timeout);
+      await FlutterDriverUtils.waitForFlutter(driver, timeout: timeout);
     } catch (error) {
       print('Element does not exists => $error');
     }
@@ -36,5 +36,13 @@ class BasePage extends FlutterWorld {
     await FlutterDriverUtils.waitForFlutter(driver, timeout: timeout);
     final text = driver.getText(finder, timeout: timeout);
     return text;
+  }
+
+  static void compareText(String actual, String matcher) {
+    // TODO: expect not work, expect(actual, matcher); 
+    // Exception: Bad state: expect() may only be called within a test.
+    if (actual != matcher) {
+      throw ("$actual is not match $matcher");
+    }
   }
 }

@@ -3,8 +3,7 @@ import 'package:flutter_gherkin/flutter_gherkin.dart';
 import 'package:gherkin/gherkin.dart';
 import 'package:glob/glob.dart';
 import 'hooks/hook_example.dart';
-import 'steps/then_steps.dart';
-import 'steps/when_steps.dart';
+import 'steps/step_definition.dart';
 
 Future<void> main() {
   final config = FlutterTestConfiguration()
