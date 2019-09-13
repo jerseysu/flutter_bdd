@@ -3,6 +3,8 @@
 
 The sample project is based on following instruction:
 
+[![CircleCI](https://circleci.com/gh/jerseysu/flutter_bdd.svg?style=svg)](https://circleci.com/gh/jerseysu/flutter_bdd)
+
 - Flutter Developer Library: [Hello World](https://github.com/flutter/flutter/tree/master/examples/hello_world) / [Navigate to a new screen and back](https://flutter.dev/docs/cookbook/navigation/navigation-basics)
 
 
