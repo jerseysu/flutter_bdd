@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cirrusci/flutter:v1.7.8-hotfix.4
+    steps:
+      - checkout
+      - run: flutter doctor
+      - run: flutter pub get
+      - run: dart test/app_test.dart
+      - run: flutter build apk --release
+
