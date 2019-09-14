@@ -95,6 +95,23 @@ class TapButtonNTimesStep extends When2WithWorld<String, int, FlutterWorld> {
 
 ```
 
+- Test Report
+
+1. Install npm package `cucumber-html-reporter`  
+```
+# Install cucumber-html-reporter
+$ npm install cucumber-html-reporter
+```
+
+2. Display Report
+```
+# Go to report folder
+$ cd report
+
+# Display Report
+$ node index.js
+```
+
 ## Documentation:
 > WIP~
 
