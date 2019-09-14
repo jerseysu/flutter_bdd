@@ -1,4 +1,4 @@
-name: hello_world
+name: flutter_bdd
 
 environment:
   # The pub client defaults to an <2.0.0 sdk constraint which we need to explicitly overwrite.
