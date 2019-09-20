@@ -7,7 +7,7 @@ import 'steps/step_definition.dart';
 
 Future<void> main() {
   final config = FlutterTestConfiguration()
-    ..features = [Glob(r"test/features/**.feature")]
+    ..features = [Glob(r"test_driver/features/**.feature")]
     ..reporters = [
       ProgressReporter(),
       TestRunSummaryReporter(),
@@ -19,7 +19,7 @@ Future<void> main() {
     ..stepDefinitions = [ExpectElementToHaveValue(),TapButtonNTimesStep(),GoToPage()]
     // ..customStepParameterDefinitions = [ColourParameter()]
     ..restartAppBetweenScenarios = true
-    ..targetAppPath = "test/app.dart"
+    ..targetAppPath = "test_driver/app.dart"
     // ..buildFlavor = "staging" // uncomment when using build flavor and check android/ios flavor setup see android file android\app\build.gradle
     // ..targetDeviceId = "all" // uncomment to run tests on all connected devices or set specific device target id
     // ..tagExpression = "@smoke" // uncomment to see an example of running scenarios based on tag expressions
