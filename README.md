@@ -50,7 +50,11 @@ Ex: (Android), default empty string
 - Execute command line with target devices
 ```
 # execute command line
-$ dart test/app_test.dart
+$ dart test_driver/app_test.dart
+
+or 
+
+$ flutter drive --target=test_driver/app.dart
 ```
 
 ![](flutter_bdd_demo_Andriod.gif)
