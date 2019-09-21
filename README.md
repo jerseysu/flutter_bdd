@@ -117,8 +117,8 @@ $ node index.js
 ```
 
 ## Documentation:
-> WIP~
 
+Blog: - [Gherkin with Flutter](https://medium.com/@loverjersey/%E7%8E%A9%E4%B8%80%E7%8E%A9-flutter-gherkin-gherkin-with-flutter-b84e246f50a2)
 
 
 ## Author
