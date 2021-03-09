@@ -12,10 +12,10 @@ The sample project is based on following instruction:
 
 ## Requirements
 
-- Flutter v1.7.8+hotfix.4
+- Flutter v2.1.0
 - [flutter_gherkin](https://pub.dartlang.org/packages/flutter_gherkin)
-- Xcode 10.1
-- Android Studio
+- Xcode 12.2
+- Android Studio 3.1.4
 
 ## flutter_gherkin Installation:
 
@@ -23,7 +23,7 @@ Setup flutter_gherkin into pubspec.yaml dependencies:
 
 ```dart
 dependencies:
-    flutter_gherkin: ^1.0.0
+    flutter_gherkin: ^1.1.9
 ```
 
 Adding a package dependency to an app:
