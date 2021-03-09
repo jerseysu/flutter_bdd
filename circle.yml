@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cirrusci/flutter:v2.0.1
+      - image: cirrusci/flutter:latest
     steps:
       - checkout
       - run: flutter doctor
