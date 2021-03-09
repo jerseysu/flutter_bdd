@@ -12,7 +12,7 @@ The sample project is based on following instruction:
 
 ## Requirements
 
-- Flutter v2.1.0
+- Flutter v2.0.1
 - [flutter_gherkin](https://pub.dartlang.org/packages/flutter_gherkin)
 - Xcode 12.2
 - Android Studio 3.1.4
