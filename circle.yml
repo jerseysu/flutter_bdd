@@ -7,6 +7,6 @@ jobs:
       - checkout
       - run: flutter doctor
       - run: flutter pub get
-      - run: dart test/app_test.dart
+      - run: flutter test test_driver/app.dart
       - run: flutter build apk --release
 
