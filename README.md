@@ -1,6 +1,8 @@
 # flutter_bdd
 > Sample Project for Flutter + flutter_gherkin demo
 
+[![jerseysu](https://circleci.com/gh/jerseysu/flutter_bdd.svg?style=svg)](https://app.circleci.com/pipelines/github/jerseysu/flutter_bdd)
+
 The sample project is based on following instruction:
 
 - Flutter Developer Library: [Hello World](https://github.com/flutter/flutter/tree/master/examples/hello_world) / [Navigate to a new screen and back](https://flutter.dev/docs/cookbook/navigation/navigation-basics)
@@ -12,10 +14,10 @@ The sample project is based on following instruction:
 
 ## Requirements
 
-- Flutter v1.7.8+hotfix.4
+- Flutter v2.0.1
 - [flutter_gherkin](https://pub.dartlang.org/packages/flutter_gherkin)
-- Xcode 10.1
-- Android Studio
+- Xcode 12.2
+- Android Studio 3.1.4
 
 ## flutter_gherkin Installation:
 
@@ -23,7 +25,7 @@ Setup flutter_gherkin into pubspec.yaml dependencies:
 
 ```dart
 dependencies:
-    flutter_gherkin: ^1.0.0
+    flutter_gherkin: ^1.1.9
 ```
 
 Adding a package dependency to an app:

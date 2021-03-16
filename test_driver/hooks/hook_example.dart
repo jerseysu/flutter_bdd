@@ -21,16 +21,16 @@ class HookExample extends Hook {
   }
 
   /// Run before a scenario and it steps are executed
-  @override
-  Future<void> onBeforeScenario(
-      TestConfiguration config, String scenario) async {
-    print("running hook before scenario '$scenario'");
-  }
+  // @override
+  // Future<void> onBeforeScenario(
+  //     TestConfiguration config, String scenario) async {
+  //       print("running hook before scenario '$scenario'");
+  // }
 
   /// Run after a scenario has executed
-  @override
-  Future<void> onAfterScenario(
-      TestConfiguration config, String scenario) async {
-    print("running hook after scenario '$scenario'");
-  }
+  // @override
+  // Future<void> onAfterScenario(
+  //     TestConfiguration config, String scenario) async {
+  //   print("running hook after scenario '$scenario'");
+  // }
 }
