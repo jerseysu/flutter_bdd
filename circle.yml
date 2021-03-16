@@ -8,5 +8,5 @@ jobs:
       - run: flutter doctor
       - run: flutter pub get
       - run: flutter test test_driver/app.dart
-      - run: flutter build apk --release
+      - run: flutter build apk --debug #TODO: To turn on release mode
 
