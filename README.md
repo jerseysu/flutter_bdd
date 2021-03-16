@@ -1,6 +1,8 @@
 # flutter_bdd
 > Sample Project for Flutter + flutter_gherkin demo
 
+[![jerseysu](https://circleci.com/gh/jerseysu/flutter_bdd.svg?style=svg)](https://app.circleci.com/pipelines/github/jerseysu/flutter_bdd)
+
 The sample project is based on following instruction:
 
 - Flutter Developer Library: [Hello World](https://github.com/flutter/flutter/tree/master/examples/hello_world) / [Navigate to a new screen and back](https://flutter.dev/docs/cookbook/navigation/navigation-basics)
