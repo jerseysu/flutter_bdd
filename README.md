@@ -126,3 +126,6 @@ Blog: - [Gherkin with Flutter](https://medium.com/@loverjersey/%E7%8E%A9%E4%B8%8
 ## Author
 
 Jersey Su – [@jerseysu](https://twitter.com/jerseysu) 
+
+# The Bad Practice
+
